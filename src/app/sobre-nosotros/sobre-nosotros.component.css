@@ -1,0 +1,87 @@
+/* Sobre Nosotros - Contenedor general */
+.sobre-nosotros {
+  background: linear-gradient(135deg, #f06a0a 0%, #2563eb 100%);
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* Título con línea decorativa */
+.sobre-nosotros .heading-underline {
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+.sobre-nosotros .heading-underline::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #fff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Contenedor de tarjetas */
+.sobre-nosotros .tarjetas-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Tarjetas (recuadros) */
+.sobre-nosotros .card {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  width: 280px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.sobre-nosotros .card:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  cursor: default;
+}
+
+/* Iconos estilo emoji o FontAwesome grandes arriba */
+.sobre-nosotros .card i {
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.5));
+}
+
+/* Título de la tarjeta */
+.sobre-nosotros .card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Texto descriptivo */
+.sobre-nosotros .card .card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f0f0f0;
+}
+
+/* Responsive: apilar tarjetas en móviles */
+@media (max-width: 768px) {
+  .sobre-nosotros .tarjetas-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sobre-nosotros .card {
+    width: 90%;
+    max-width: 350px;
+  }
+}

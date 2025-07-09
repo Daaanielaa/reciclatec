@@ -1,0 +1,214 @@
+/* Barra de navegación */
+.navbar {
+  background: linear-gradient(to right, rgba(240, 102, 10, 0.8), rgba(37, 99, 235, 0.8));
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+  color: #FF660A; /* tomate */
+  text-decoration: underline;
+}
+
+/* Botón menú móvil */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(to bottom, rgba(37, 99, 235, 0.9), rgba(240, 102, 10, 0.9));
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+/* Barra de navegación */
+.navbar {
+  background: linear-gradient(to right, rgba(240, 102, 10, 0.85), rgba(37, 99, 235, 0.85));
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+  color: #F0660A; /* tomate */
+  text-decoration: underline;
+}
+
+/* Botón menú móvil */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(to bottom, rgba(240, 102, 10, 0.9), rgba(37, 99, 235, 0.9));
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Footer básico con mismo degradado */
+footer {
+  background: linear-gradient(to right, rgba(240, 102, 10, 0.85), rgba(37, 99, 235, 0.85));
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.navbar {
+  width: 100%;
+  background: linear-gradient(to right, rgba(240, 102, 10, 0.9), rgba(37, 99, 235, 0.9));
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-center a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar-center a:hover,
+.navbar-center a.active {
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-center {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .navbar-center a {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .navbar-right {
+    display: none; /* puedes ocultarlo o moverlo abajo */
+  }
+}

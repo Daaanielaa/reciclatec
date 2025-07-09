@@ -1,0 +1,31 @@
+<section class="servicios-header">
+  <h2>Te mostramos nuestros servicios ambientales</h2>
+  <p>
+    Explora cómo puedes contribuir a un planeta más limpio con nuestros servicios especializados en RAEE.
+  </p>
+</section>
+
+<section class="servicios-grid">
+  <div class="servicio-card" *ngFor="let servicio of servicios">
+    <div class="servicio-icono">
+      <i [class]="servicio.icono"></i>
+    </div>
+    <h3>{{ servicio.titulo }}</h3>
+    <button (click)="servicio.expandido = !servicio.expandido" class="toggle-btn">
+      {{ servicio.expandido ? 'Ocultar detalles' : 'Ver detalles' }}
+    </button>
+    <div class="servicio-detalle" *ngIf="servicio.expandido">
+      <p>{{ servicio.descripcion }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="servicios-footer">
+  <h3>¿Por qué es importante gestionar los RAEE?</h3>
+  <ul>
+    <li>✅ Reducimos el impacto ambiental</li>
+    <li>✅ Aprovechamos materiales reciclables</li>
+    <li>✅ Cumplimos con normas legales</li>
+    <li>✅ Protegemos la salud humana</li>
+  </ul>
+</section>

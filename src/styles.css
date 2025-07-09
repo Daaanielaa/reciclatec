@@ -1,0 +1,103 @@
+/* Fondo de toda la página con imagen + degradado tomate-azul */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, rgba(240, 102, 10, 0.85), rgba(37, 99, 235, 0.6));
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #222;
+}
+
+
+/* Para secciones blancas que necesitan destacar sobre fondo */
+.section-white-bg {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #000; /* texto negro para contraste */
+}
+/* Barra de navegación */
+.navbar {
+  background: linear-gradient(to right, rgba(240, 102, 10, 0.85), rgba(37, 99, 235, 0.85));
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+  color: #F0660A; /* tomate */
+  text-decoration: underline;
+}
+
+/* Botón menú móvil */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(to bottom, rgba(240, 102, 10, 0.9), rgba(37, 99, 235, 0.9));
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Footer básico con mismo degradado */
+footer {
+  background: linear-gradient(to right, rgba(240, 102, 10, 0.85), rgba(37, 99, 235, 0.85));
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}

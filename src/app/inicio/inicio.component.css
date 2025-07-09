@@ -1,0 +1,406 @@
+/* ======== Fondo General ======== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, rgba(240,102,10,0.83), rgba(37,99,235,0.6));
+  min-height: 100vh;
+  color: #333;
+}
+
+/* ======== Navbar ======== */
+nav.navbar {
+  background: linear-gradient(to right, rgba(240,102,10,0.83), rgba(37,99,235,0.8));
+  color: rgb(19, 1, 1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.2);
+}
+
+nav.navbar .nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav.navbar .nav-links a:hover {
+  color: #f06a0a; /* tomate más brillante */
+  text-decoration: underline;
+}
+
+/* ======== Imagen Principal con Texto ======== */
+.inicio-fondo {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.inicio-fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25; /* baja opacidad para no robar protagonismo */
+  pointer-events: none; /* evita interacción */
+}
+
+.inicio-fondo .texto-superpuesto {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: rgba(238, 8, 8, 0.4);
+  padding: 1.5rem 2rem;
+  max-width: 400px;
+  color: white;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  animation: fadeIn 2s ease forwards;
+  border-radius: 10px;
+}
+
+/* ======== Animación fadeIn ======== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-60%) }
+  to { opacity: 1; transform: translateY(-50%) }
+}
+
+/* ======== Tarjetas Informativas (AEE, COP, RAEE) ======== */
+.tarjetas-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  width: 280px;
+  height: 340px;
+  perspective: 1000px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+}
+
+.card-front {
+  background-color: white;
+}
+
+.card-back {
+  background-color: #f7f7f7;
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 25px;
+  color: #555;
+}
+
+.icon-img-ajustada {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #25478b; /* azul oscuro */
+}
+
+/* ======== Sección REP ======== */
+section.bg-gray-50 {
+  background-color: #f9fafb;
+  padding: 4rem 1.5rem;
+}
+
+section.bg-gray-50 .max-w-7xl {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section.bg-gray-50 h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #25478b;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #f87171; /* tomate */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+section.bg-gray-50 p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+section.bg-gray-50 .grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+section.bg-gray-50 .bg-white {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  flex: 1 1 280px;
+  max-width: 300px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+section.bg-gray-50 .bg-white:hover {
+  box-shadow: 0 8px 30px rgba(240,113,113,0.5);
+}
+
+section.bg-gray-50 .bg-white img {
+  max-width: 160px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+section.bg-gray-50 h3 {
+  font-weight: 700;
+  color: #25478b;
+  margin-bottom: 0.75rem;
+}
+
+section.bg-gray-50 p {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ======== Titulos con subrayado ======== */
+.heading-underline {
+  position: relative;
+}
+
+.heading-underline::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: #f87171;
+  bottom: -8px;
+  left: 20%;
+  border-radius: 5px;
+}
+
+/* ======== Texto general ======== */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 768px) {
+  .tarjetas-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.navbar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  nav.navbar .nav-links a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+
+  .inicio-fondo .texto-superpuesto {
+    font-size: 1.8rem;
+    max-width: 300px;
+    padding: 1rem 1.5rem;
+  }
+
+  section.bg-gray-50 .bg-white {
+    max-width: 90vw;
+  }
+}
+/* Ajustes generales para dar más espacio */
+.tarjetas-horizontal {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* más espacio horizontal */
+  flex-wrap: wrap;
+  margin-top: 50px; /* más espacio arriba */
+  padding-bottom: 50px; /* espacio abajo para que no se pegue */
+}
+
+.card {
+  width: 300px; /* un poco más ancho */
+  height: 360px; /* un poco más alto */
+  margin-bottom: 40px; /* espacio vertical */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  border-radius: 20px;
+  transition: transform 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+}
+
+/* Para que las secciones tengan más padding */
+section.bg-gray-50 {
+  padding: 5rem 2rem; /* más padding para respiración */
+}
+
+section.bg-gray-50 .max-w-7xl {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Titulos más separados */
+section.bg-gray-50 h2,
+h4.text-center.text-success.mb-4 {
+  margin-bottom: 2rem;
+}
+
+/* Tarjetas REP con más margen */
+section.bg-gray-50 .grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+section.bg-gray-50 .bg-white {
+  padding: 3rem 2rem;
+  max-width: 320px;
+  box-shadow: 0 7px 30px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Texto general */
+p {
+  margin-bottom: 1.25rem;
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  .tarjetas-horizontal {
+    gap: 30px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .card {
+    width: 90vw;
+    height: auto;
+  }
+
+  section.bg-gray-50 {
+    padding: 3rem 1rem;
+  }
+
+  section.bg-gray-50 .bg-white {
+    max-width: 90vw;
+    padding: 2rem 1rem;
+  }
+}
+.titulo-central {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff; /* azul fuerte */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtexto-central {
+  font-size: 1.1rem;
+  color: #000000; /* gris medio */
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.carousel-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Animación */
+.fade {
+  animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
