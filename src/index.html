@@ -1,19 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title>RAEEProyecto</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- ✅ FONT AWESOME -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-y1Rr8W4jbm8zFBo7qWr3T6ZnF/axIb41/3+7q3b2V+MLt8mG1mpKZBjVMI1h+pq1J6z34XqD7DLOdBoFkG6rQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <app-root></app-root>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('.nav-links');
-    nav.classList.toggle('show');
-  }
-</script>
